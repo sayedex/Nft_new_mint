@@ -15,14 +15,14 @@ export function Header() {
    {
         id: 0,
         name: "Opensea",
-        link: "",
-        islink:false,
+        link: "https://tailwindcss.com/docs/font-family",
+        islink:true,
     },
     {
         id: 0,
-        name: "Bscscan",
-        link: "project",
-        islink:false,
+        name: "Etherscan",
+        link: "https://tailwindcss.com/docs/font-family",
+        islink:true,
     },
 
 ]
@@ -30,8 +30,10 @@ export function Header() {
 
 useEffect(() => {
     setIsMounted(true);
-    setTheme("dark")
-  }, []);
+    setTheme("dark");
+  },[]);
+
+
   const ChangeToDarkMood = ()=>{
     if (isMounted) {
         setTheme(theme === "light" ? "dark" : "light");
@@ -52,18 +54,18 @@ useEffect(() => {
                     {/* logo */}
                     <LazyLoadImage
                         src={logo.src}
-                        width={30}
+                        width={70}
                         alt="Solanart"
-                        className="hidden dark:block  cursor-pointer"
-                        height={30}/>
+                        className="hidden dark:block  cursor-pointer rounded-full"
+                        height={70}/>
                     <LazyLoadImage
                         src={logo.src}
                         alt="Solanart"
-                        className="dark:hidden cursor-pointer"
-                        height={30}
-                        width={30}
+                        className="dark:hidden cursor-pointer rounded-full"
+                        height={70}
+                        width={70}
                         />
-                    <div className="text-xl font-bold font-[Nexa] ml-2 text-black dark:text-white">Trstake</div>
+                    <div className=" hidden md:block text-2xl  font-bold font-[Nexa] ml-2 text-black dark:text-white">NFT SIGNALS</div>
                 </div>
                 {/* logo */}
 

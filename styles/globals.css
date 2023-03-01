@@ -2,8 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+body{
+	font-family: 'VT323', monospace;
 
+}
+
+@font-face {
+	font-family: "MinecraftRegular";
+	src: url("../public/fonts/1_Minecraft-Regular.otf");
+  }
+
+  
 @layer components{
     .AllPading {
      @apply   max-w-7xl m-auto    

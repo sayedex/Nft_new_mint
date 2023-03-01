@@ -22,7 +22,7 @@ export const ConnectButtonwagmi= () => {
     <ConnectKitButton.Custom>
       {({ isConnected, isConnecting, show, hide, address, ensName }) => {
         return (
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded-2xl tracking-[1px]" onClick={show} >
+          <button className="bg-gradient-to-r from-purple-400 to-pink-600 hover:to-purple-500 text-white font-bold py-2 px-10 rounded-2xl tracking-[1px]" onClick={show} >
           {`${isConnecting?"Connecting..":"Connect"}`}
           </button>
           

@@ -5,15 +5,13 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer
+        <div
             className="flex flex-col justify-center gap-3 py-12 text-center text-sm uppercase text-black dark:text-white  md:flex-row">
-            <a href="/">All rights reserved 2023 ©</a>
-            <a target="_blank" href="">OpenSea</a>
-            <a
-                target="_blank"
-                href="">Etherscan</a>
+            <a  rel="noreferrer" >All rights reserved 2023 ©  </a>
+            <a  rel="noreferrer" target="_blank" href="">OpenSea</a>
+            <a  rel="noreferrer" target="_blank"  href="">Etherscan</a>
     
-        </footer>
+        </div>
     )
 }
 

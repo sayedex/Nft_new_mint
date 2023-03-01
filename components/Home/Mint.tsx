@@ -27,12 +27,12 @@ export function Mint() {
 
 <div className='py-2'>
 <h2 className='text-4xl font-extrabold'>{supply}/4000 Minted</h2>
-<h2 className='text-lg uppercase py-2 text-white dark:text-white'>Price  0.01ETH</h2>
+<h2 className='text-lg uppercase py-2 text-white dark:text-white'>Price  0.01 ETH</h2>
 </div>
 
 {load?<div>
 {isConnected? <button disabled={isLoading} onClick={()=>Mintnft()} 
-  className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded-2xl tracking-[1px]'>
+  className=' bg-gradient-to-r from-purple-400 to-pink-600 hover:to-purple-500 text-white font-bold py-2 px-10 rounded-2xl tracking-[1px]'>
     {isLoading?"Minting..":"Mint"}</button>:<ConnectButtonwagmi/> }</div>:null}
 
 
