@@ -8,7 +8,7 @@ function Main() {
 
 
 
-<div className='flex flex-col md:flex-row gap-5 items-center max-w-7xl m-auto h-[90vh] border-b'>
+<div className='flex flex-col md:flex-row gap-5 items-center max-w-7xl m-auto md:h-[90vh] py-10 md:py-5 border-b'>
 
 <SectionOne/>
 <Mint/>
