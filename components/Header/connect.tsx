@@ -23,7 +23,7 @@ export const ConnectButtonwagmi= () => {
       {({ isConnected, isConnecting, show, hide, address, ensName }) => {
         return (
           <button className="bg-gradient-to-r from-purple-400 to-pink-600 hover:to-purple-500 text-white font-bold py-2 px-10 rounded-2xl tracking-[1px]" onClick={show} >
-          {`${isConnecting?"Connecting..":"Connect"}`}
+        Connect
           </button>
           
         );

@@ -3,7 +3,7 @@ import { useConnect } from 'wagmi';
 import { useTheme } from "next-themes" 
 import { ExampleButton } from './connect';
 import {Popover, Transition} from '@headlessui/react'
-import logo from "../../public/logo.png"
+import logo from "../../public/logo.webp"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useState ,useEffect} from 'react';
 import Link from 'next/link';

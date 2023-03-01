@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import secImg from "../../public/IMG/section.png"
+import secImg from "../../public/IMG/section.webp"
 export function SectionOne() {
   return (
     <div className='w-full md:w-6/12'>
