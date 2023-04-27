@@ -8,12 +8,13 @@ import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
-import { bsc,bscTestnet,goerli } from "wagmi/chains";
+import { bsc,bscTestnet,goerli ,arbitrum} from "wagmi/chains";
 import { ethers } from "ethers";
 
 
-const RPC_URL = 'https://bsc-dataseed.binance.org/';
+const RPC_URL = 'https://data-seed-prebsc-1-s2.binance.org:8545';
 export const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
+
 
 
 // Configure chains & providers with the Alchemy provider.
@@ -22,7 +23,7 @@ export const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
 const alchemyId = "Tv277_RjwkXDuii_WGiG_X8RL-T56yyG";
 //  up client
 //
-const chains = [goerli];
+const chains = [bscTestnet];
 
 export const client = createClient(
     getDefaultClient({

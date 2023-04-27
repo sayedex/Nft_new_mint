@@ -1,12 +1,17 @@
 import { ethers } from 'ethers';
 import React, { useEffect, useState } from 'react'
-import { useTransation } from '../../hooks/useTransation'
+import useDirectCall from '../../hooks/useTransation';
 import {useAppSelector,useAppdispatch} from "../../hooks/redux";
 import { ConnectButtonwagmi } from '../Header/connect';
-import { useAccount } from 'wagmi'
+import { NFT_CONTRACT ,NFT_PRICE} from '../../config';
+import { useAccount ,  useSigner,} from 'wagmi'
+import { fetchTotalMint } from '../../hooks/Totalsupply';
+
 export function Mint() {
+  const dispatch = useAppdispatch()
+  const { data: signer } = useSigner();
     const { address, isConnecting, isDisconnected ,isConnected} = useAccount();
-    const {isFetching,data,writeAsync,error,isLoading} = useTransation();
+    const {BuyToken,loading} = useDirectCall(signer,NFT_CONTRACT);
     const supply = useAppSelector((state) => state.wallet.totalSupply);
     const [load,setload] = useState(false);
     useEffect(()=>{
@@ -14,8 +19,12 @@ export function Mint() {
     },[])
 
     const Mintnft = ()=>{
-      writeAsync?.();
+      BuyToken("Mint",NFT_PRICE);
+
     }
+    useEffect(()=>{
+      dispatch(fetchTotalMint())
+    },[loading])
 
     
 
@@ -31,9 +40,9 @@ export function Mint() {
 </div>
 
 {load?<div>
-{isConnected? <button disabled={isLoading} onClick={()=>Mintnft()} 
+{isConnected? <button disabled={loading} onClick={()=>Mintnft()} 
   className=' bg-gradient-to-r from-purple-400 to-pink-600 hover:to-purple-500 text-white font-bold py-2 px-10 rounded-2xl tracking-[1px]'>
-    {isLoading?"Minting..":"Mint"}</button>:<ConnectButtonwagmi/> }</div>:null}
+    {loading?"Minting..":"Mint"}</button>:<ConnectButtonwagmi/> }</div>:null}
 
 
 
